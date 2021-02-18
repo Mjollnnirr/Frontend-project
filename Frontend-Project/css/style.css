@@ -1,0 +1,388 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: #212529;
+}
+
+header .navbar {
+    height: 80px;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+header .navbar ul {
+    margin-left: 80px;
+    color: gray;
+}
+
+header .navbar ul li {
+    color: gray;
+}
+
+#Entry .leftSide {
+    margin-top: 120px;
+}
+
+#Entry .leftSide h3 {
+    font-weight: 400;
+    font-size: 28px;
+    color: #1E3056;
+    line-height: 46px;
+    margin-bottom: 20px;
+}
+
+#Entry .leftSide p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #697BA2;
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+
+#Entry a {
+    color: white;
+    padding-right: 2.1875rem;
+    padding-left: 2.1875rem;
+    background-color: #1A153A;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-size: 12px;
+}
+
+#Entry a:hover {
+    background-color: #120e27;
+}
+
+/* #Entry .grid-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr .5fr;
+    grid-template-areas: "first second"
+                         "first fourth"
+                         "third fourth";
+} */
+
+#Entry .grid-container .first .image
+{
+    width: 264px;
+    height: 337px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .second .image
+{
+    width: 264px;
+    height: 251px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .third .image
+{
+    width: 264px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .fourth .image
+{
+    width: 264px;
+    height: 372px;
+    border-radius: 5px;
+}
+
+
+#Entry .grid-container .first
+{
+    /* grid-area: first; */
+    overflow: hidden;
+    border-radius: 5px;
+
+}
+
+#Entry .grid-container .first img
+{
+    width: 264px;
+    height: 337px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .second
+{
+    /* grid-area: second; */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .second img
+{
+    width: 264px;
+    height: 251px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .third
+{
+    /* grid-area: third; */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .third img
+{
+    width: 264px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .fourth
+{
+    max-height: 337px;
+    /* grid-area: fourth; */
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+#Entry .grid-container .fourth img
+{
+    width: 264px;
+    height: 286px;
+    border-radius: 5px;
+}
+
+/* #Entry .grid-container img:hover
+{
+    transition: all .3s;
+}
+
+#Entry .grid-container img:hover
+{
+    transform: scale(1.3);
+} */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, .75fr);
+    grid-template-rows: 1fr .3fr 1.2fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+    
+    .first { grid-area: 1 / 1 / 3 / 2; }
+    .second { grid-area: 1 / 2 / 2 / 3; }
+    .third { grid-area: 3 / 1 / 4 / 2; }
+    .fourth { grid-area: 2 / 2 / 4 / 3; }
+
+#Entry .grid-container .fourth .afterContent {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 264px;
+    height: 286px;
+    border-radius: 5px;
+    background-color: #1a153abd;
+    color: #fff;
+}
+
+#Entry .grid-container .fourth .afterContent .text {
+    position: absolute;
+    top: 100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 991) {
+    #Entry .grid-container{
+        margin-top: 45px;
+    }
+
+    #Entry .grid-container .first img{
+        width: 340px;
+        height: 337px;
+    }
+}
+
+
+
+
+
+
+
+
+
+#LatestBlogPosts {
+    padding-bottom: 5rem;
+}
+
+#LatestBlogPosts .blogHeader {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #3B566E;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+}
+
+#LatestBlogPosts .blogText {
+    font-size: 16;
+    line-height: 28px;
+    font-weight: 400;
+    color: #6F8BA4;
+    text-align: center;
+    margin-bottom: 2.875rem;
+}
+
+#LatestBlogPosts .card {
+    border: none;
+}
+
+#LatestBlogPosts .card img {
+    width: 351px;
+    height: 220px;
+    border-radius: 0.3125rem;
+    align-self: center;
+}
+
+#LatestBlogPosts .card .card-body a {
+    color: white;
+    padding-right: 2.1875rem;
+    padding-left: 2.1875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-size: 12px;
+    background-color: #1A153A;
+}
+
+#LatestBlogPosts .card .card-body a:hover {
+    background-color: #120e27;
+}
+
+#LatestBlogPosts .card .card-body h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#LatestBlogPosts .card .card-body p {
+    font-size: 0.875rem;
+}
+
+@media only screen and (max-width: 991px) {
+    #LatestBlogPosts .justifyMedia {
+        justify-content: center;
+    }
+
+    #LatestBlogPosts .card {
+        padding-top: 0.625rem;
+    }
+}
+
+@media only screen and (max-width: 767) {
+    #LatestBlogPosts .card {
+        padding-top: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+#Footer {
+    background-color: #1A153A;
+    color: white;
+    font-size: 0.875rem;
+}
+
+#Footer .row {
+    padding-top: 4.375rem;
+}
+
+#Footer .image img {
+    margin-bottom: 1.875rem;
+}
+
+#Footer .footer-text p {
+    margin: 0;
+}
+
+#Footer .links ul {
+    padding: 0;
+}
+
+#Footer .links ul li {
+    list-style-type: none;
+}
+
+#Footer .links ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#Footer .links ul li a span {
+    transition: all .4s;
+}
+
+#Footer .links ul li a:hover span {
+    padding-left: 5px;
+}
+
+#Footer h5 {
+    margin-bottom: 1.857rem;
+}
+
+#Footer .links ul li a i {
+    margin-right: .7rem;
+}
+
+#Footer .contacting p {
+    margin-bottom: 10px;
+}
+
+#Footer .contacting ul {
+    padding: 0;
+    display: flex;
+}
+
+#Footer .contacting ul li {
+    list-style-type: none;
+    padding-right: 1rem;
+    font-size: .8rem;
+}
+
+#Footer .contacting ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#Footer .endingFooter {
+    border-top: .5px solid rgba(71, 71, 71, 0.815);
+    padding-top: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+    #Footer h5 {
+        padding-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* #Footer .contactUsMedia{
+        align-self: center;
+    } */
+
+    #Footer .row {
+        justify-content: center;
+    }
+}
