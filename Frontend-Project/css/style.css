@@ -200,15 +200,62 @@ header .navbar ul li {
     font-weight: 400;
 }
 
-@media only screen and (max-width: 991) {
-    #Entry .grid-container{
-        margin-top: 45px;
+@media only screen and (max-width: 991px) {
+    #Entry .grid-container .image{
+        /* margin: 0px !important; */
     }
 
     #Entry .grid-container .first img{
         width: 340px;
         height: 337px;
     }
+
+    #Entry .grid-container .second img{
+        width: 340px;
+        height: 301px;
+    }
+
+    #Entry .grid-container .third img{
+        width: 340px;
+        height: 301px;
+    }
+
+    #Entry .grid-container .third img{
+        width: 340px;
+        height: 337px;
+        overflow: visible
+    }
+
+    #Entry .grid-container .fourth{
+        
+        width: 340px;
+        max-height: 487px !important;
+    }
+
+    #Entry .grid-container .fourth .image{
+        position: relative;
+        width: 340px;
+        height: 387px;
+    }
+
+    #Entry .grid-container .fourth .image img{
+        width: 340px;
+        height: 387px;
+    }
+
+    #Entry .grid-container .fourth .afterContent{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 340px;
+        height: 387px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    
 }
 
 
