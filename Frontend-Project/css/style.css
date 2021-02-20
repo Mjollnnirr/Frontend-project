@@ -1192,6 +1192,22 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     box-shadow: none;
 }
 
+@media only screen and (max-width: 991px){
+    #PricingPlans .container .row{
+        justify-content: center;
+    }
+
+    #PricingPlans .container .row .card{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #PricingPlans .card span.number{
+        left: 232px;
+    }
+}
+
 /* Pricing Plans ends */
 
 
@@ -1240,6 +1256,12 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     box-shadow: none;
 }
 
+@media only screen and (max-width: 991px){ 
+    #ParallaxCounter .parallaxContent .text{
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
 
 /* RegularParallax ends */
 
