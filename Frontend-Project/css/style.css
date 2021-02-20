@@ -3,11 +3,20 @@ body {
     margin: 0px;
     box-sizing: border-box;
     color: #212529;
+    background: #fff url(../images/header-bg.svg) top left no-repeat;
+    /* background-color: #fff; */
+}
+
+/* navbar start */
+
+header nav {
+    background-color: #120e2700;
 }
 
 header .navbar {
     height: 80px;
     position: fixed;
+    transition: all .3s;
     z-index: 999;
     left: 0;
     right: 0;
@@ -22,6 +31,46 @@ header .navbar ul {
 header .navbar ul li {
     color: gray;
 }
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: #6F8BA4;
+}
+
+header .navbar .buttons .singIn {
+    padding: 3px 30px;
+    border: 1px solid #1A153A;
+    color: #1A153A;
+}
+
+header .navbar .buttons .singIn:hover {
+    padding: 3px 30px;
+    background: linear-gradient(135deg, #565178 0%, #1A153A 100%);
+    ;
+    border: 1px solid #1A153A;
+    color: white;
+}
+
+header .navbar .buttons .singUp {
+    padding: 3px 30px;
+    border: 1px solid #1A153A;
+    background: linear-gradient(135deg, #1A153A 0%, #565178 100%);
+    ;
+    color: white;
+}
+
+header .navbar .buttons .singUp:hover {
+    padding: 3px 30px;
+    background: white;
+    border: 1px solid #1A153A;
+    color: #1A153A;
+}
+
+/* navbar end */
+
+
+
+/* Welcoming start */
 
 #Entry .leftSide {
     margin-top: 120px;
@@ -67,89 +116,102 @@ header .navbar ul li {
                          "third fourth";
 } */
 
-#Entry .grid-container .first .image
-{
+#Entry .grid-container .first .image {
+    overflow: hidden;
     width: 264px;
     height: 337px;
     border-radius: 5px;
 }
 
-#Entry .grid-container .second .image
-{
+#Entry .grid-container .second .image {
+    overflow: hidden;
     width: 264px;
     height: 251px;
     border-radius: 5px;
 }
 
-#Entry .grid-container .third .image
-{
+#Entry .grid-container .third .image {
+    overflow: hidden;
     width: 264px;
     height: 200px;
     border-radius: 5px;
 }
 
-#Entry .grid-container .fourth .image
-{
+#Entry .grid-container .fourth .image {
+    overflow: hidden;
     width: 264px;
     height: 372px;
     border-radius: 5px;
 }
 
 
-#Entry .grid-container .first
-{
+#Entry .grid-container .first {
     /* grid-area: first; */
     overflow: hidden;
     border-radius: 5px;
 
 }
 
-#Entry .grid-container .first img
-{
+#Entry .grid-container .first img {
     width: 264px;
     height: 337px;
     border-radius: 5px;
 }
 
-#Entry .grid-container .second
-{
+#Entry .grid-container .second {
     /* grid-area: second; */
     overflow: hidden;
     border-radius: 5px;
 }
 
-#Entry .grid-container .second img
-{
+#Entry .grid-container .second img {
     width: 264px;
     height: 251px;
     border-radius: 5px;
 }
 
-#Entry .grid-container .third
-{
+#Entry .grid-container .third {
     /* grid-area: third; */
+    position: relative;
     overflow: hidden;
     border-radius: 5px;
 }
 
-#Entry .grid-container .third img
-{
+#Entry .grid-container .third .playIcon {
+    cursor: pointer;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    line-height: 81px;
+    position: absolute;
+    top: 22%;
+    left: 38%;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+#Entry .grid-container .third .playIcon i {
+    font-size: 2rem;
+    color: white;
+    padding-left: 5px;
+}
+
+#Entry .grid-container .third img {
     width: 264px;
     height: 200px;
     border-radius: 5px;
 }
 
-#Entry .grid-container .fourth
-{
-    max-height: 337px;
+#Entry .grid-container .fourth {
+    max-height: 286px;
     /* grid-area: fourth; */
     overflow: hidden;
     border-radius: 5px;
     position: relative;
 }
 
-#Entry .grid-container .fourth img
-{
+#Entry .grid-container .fourth img {
     width: 264px;
     height: 286px;
     border-radius: 5px;
@@ -171,15 +233,25 @@ header .navbar ul li {
     grid-template-rows: 1fr .3fr 1.2fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    }
-    
-    .first { grid-area: 1 / 1 / 3 / 2; }
-    .second { grid-area: 1 / 2 / 2 / 3; }
-    .third { grid-area: 3 / 1 / 4 / 2; }
-    .fourth { grid-area: 2 / 2 / 4 / 3; }
+}
+
+.first {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.second {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.third {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.fourth {
+    grid-area: 2 / 2 / 4 / 3;
+}
 
 #Entry .grid-container .fourth .afterContent {
-
     position: absolute;
     left: 0;
     right: 0;
@@ -190,6 +262,7 @@ header .navbar ul li {
     border-radius: 5px;
     background-color: #1a153abd;
     color: #fff;
+    z-index: 19;
 }
 
 #Entry .grid-container .fourth .afterContent .text {
@@ -200,50 +273,91 @@ header .navbar ul li {
     font-weight: 400;
 }
 
+#Entry .grid-container img {
+    transition: transform .3s;
+}
+
+#Entry .grid-container img:hover {
+    transform: scale(1.1);
+}
+
+#Entry .grid-container .fourth .afterContent:hover+img {
+    transform: scale(1.1);
+}
+
 @media only screen and (max-width: 991px) {
-    #Entry .grid-container .image{
-        /* margin: 0px !important; */
+
+
+
+    #Entry .leftSide {
+        margin-top: 0;
+        text-align: center;
     }
 
-    #Entry .grid-container .first img{
+    #Entry .col-lg-5.col-md-12.col-sm-12 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #Entry .grid-container {
+        margin-top: 30px;
+    }
+
+    #Entry .grid-container .first .image {
+        width: 340px;
+    }
+
+    #Entry .grid-container .first img {
         width: 340px;
         height: 337px;
     }
 
-    #Entry .grid-container .second img{
+    #Entry .grid-container .second img {
         width: 340px;
         height: 301px;
     }
 
-    #Entry .grid-container .third img{
+    #Entry .grid-container .third img {
         width: 340px;
         height: 301px;
     }
 
-    #Entry .grid-container .third img{
+    #Entry .grid-container .third img {
         width: 340px;
         height: 337px;
         overflow: visible
     }
 
-    #Entry .grid-container .fourth{
-        
+    #Entry .grid-container .fourth {
+
         width: 340px;
         max-height: 487px !important;
     }
 
-    #Entry .grid-container .fourth .image{
+    #Entry .grid-container .second .image {
         position: relative;
         width: 340px;
-        height: 387px;
+        height: 251px;
     }
 
-    #Entry .grid-container .fourth .image img{
+    #Entry .grid-container .third .image {
+        position: relative;
+        width: 340px;
+        height: 200px;
+    }
+
+    #Entry .grid-container .fourth .image {
+        position: relative;
+        width: 340px;
+        height: 285px;
+    }
+
+    #Entry .grid-container .fourth .image img {
         width: 340px;
         height: 387px;
     }
 
-    #Entry .grid-container .fourth .afterContent{
+    #Entry .grid-container .fourth .afterContent {
         position: absolute;
         left: 0;
         right: 0;
@@ -254,17 +368,473 @@ header .navbar ul li {
     }
 }
 
-@media only screen and (max-width: 767px){
-    
+@media only screen and (max-width: 767px) {
+    #Entry .grid-container .first {
+        width: 250px;
+    }
+
+    #Entry .grid-container .second {
+        width: 250px;
+    }
+
+    #Entry .grid-container .third {
+        height: 200px;
+    }
+
+    #Entry .grid-container .fourth {
+        width: 250px;
+    }
+
+    #Entry .grid-container .third .playIcon {
+        position: absolute;
+        top: 33%;
+        left: 38%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #Entry .grid-container .first {
+        width: 268px;
+    }
+
+    #Entry .grid-container .second {
+        width: 268px;
+    }
+
+    #Entry .grid-container .fourth {
+        width: 268px;
+    }
+
+    #Entry .grid-container .fourth .afterContent .text {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #Entry .grid-container .first {
+        width: 168px;
+        height: 250px;
+    }
+
+    #Entry .grid-container .first img {
+        width: 168px;
+        height: 250px;
+    }
+
+    #Entry .grid-container .second {
+        width: 168px;
+        height: 184px;
+    }
+
+    #Entry .grid-container .second img {
+        width: 168px;
+        height: 184px;
+    }
+
+    #Entry .grid-container .third {
+        height: 135px;
+    }
+
+    #Entry .grid-container .fourth {
+        width: 170px;
+        height: 200px;
+    }
+
+    #Entry .grid-container .third .playIcon {
+        position: absolute;
+        top: 24%;
+        left: 30%;
+    }
+
+    #Entry .grid-container .fourth .afterContent .text {
+        width: 188px;
+        position: absolute;
+        top: 50px;
+    }
 }
 
 
+/* welcoming end */
+
+
+/* Upper Services start */
+
+#UpperServices{
+    background-color: rgb(245, 245, 245);
+}
+
+#UpperServices .card{
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 300px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+#UpperServices .card:hover{
+    background-color: #1A153A;
+}
+
+#UpperServices .card:hover .card-body{
+    background-color: #1A153A;
+    color: white;
+}
+
+#UpperServices .card:hover .card-body p.display-5{
+    color: white;
+}
+
+#UpperServices .card:hover .card-body p.card-text{
+    color: white;
+}
+
+#UpperServices .card .icon{
+    height: 67px;
+    width: 67px;
+    text-align: center;
+    line-height: 67px;
+    background-color: rgb(245, 245, 245);
+    color: #1A153A;
+    border-radius: 50%;
+    margin-top: 35px;
+}
+
+#UpperServices .card .card-body{
+    background-color: white;
+    padding: 0px;
+    transition: all .3s;
+}
+
+#UpperServices .card .card-body p.display-5{
+    color: #3B566E;
+    margin-top: 30px;
+}
+
+#UpperServices .card .card-body p.card-text{
+    color: #6F8BA4;
+    width: 215px;
+    font-size: 14px;
+}
+
+#UpperServices .animate__delay-2{
+    animation-delay: .05s;
+}
+
+#UpperServices .animate__delay-3{
+    animation-delay: .1s;
+}
+
+#UpperServices .animate__delay-4{
+    animation-delay: .15s;
+}
+
+/* Upper Services Ends */
+
+
+/* Cloud Services Starts */
+
+#CloudServices{
+    background-color: #f1f3f5;
+}
+
+#CloudServices .text-left{
+    margin-top: 100px;
+}
+
+#CloudServices .text-left p.header{
+    font-weight: 400;
+    font-size: 30px;
+    color: #3B566E;
+}
+
+#CloudServices .text-left p.body{
+    font-weight: 400;
+    font-size: 16px;
+    color: #6F8BA4;
+}
+
+#CloudServices .listSide a.linkList.mainActive::after{
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    background-color: #1A153A;
+    z-index: -1;
+    transform: rotate(55deg) translateY(45px) translateX(-70px);;
+}
+
+#CloudServices .listSide a.linkList.mainActive i{
+    position: relative;
+    /* margin-left: 22px;
+    margin-right: 32px; */
+    margin-left: 25px;
+    margin-right: 37px;
+    z-index: 19;
+    color: white;
+    visibility: visible;
+}
+
+#CloudServices .listSide a.linkList{
+    line-height: 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    height: 2.5rem;
+    width: 15.9375rem;
+    color: #3B566E;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 15;
+    transition: all .3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#CloudServices .listSide a.linkList.active::after{
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    background-color: #1A153A;
+    z-index: -1;
+    /* border-left: 3rem solid #1A153A;
+    border-top: 3rem solid #1A153A;
+    border-bottom: 3rem solid #1A153A;
+    border-right: 3rem solid #1A153A; */
+    transform: rotate(55deg) translateY(45px) translateX(-70px);;
+    transition: all .3s;
+}
+
+#CloudServices .listSide a.linkList::after{
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    background-color: #eeedf5;
+    z-index: -1;
+    /* border-left: 3rem solid #1A153A;
+    border-top: 3rem solid #1A153A;
+    border-bottom: 3rem solid #1A153A;
+    border-right: 3rem solid #1A153A; */
+    transform: rotate(55deg) translateY(50px) translateX(-65px);;
+    transition: all .3s;
+}
+
+#CloudServices .listSide a.linkList.active i{
+    position: relative;
+    /* margin-left: 22px;
+    margin-right: 32px; */
+    margin-left: 25px;
+    margin-right: 37px;
+    z-index: 19;
+    color: white;
+    visibility: visible;
+    transition: all .3s;
+}
+
+#CloudServices .listSide a.linkList i{
+    position: relative;
+    margin-left: 22px;
+    margin-right: 32px;
+    /* margin-left: 25px;
+    margin-right: 37px; */
+    z-index: 19;
+    color: #1A153A;
+    visibility: visible;
+    transition: all .3s;
+}
+
+#CloudServices .image.imageRight{
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+@media only screen and (max-width: 991px){
+    #CloudServices .image.imageRight{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #CloudServices .listSide a.linkList{
+        width: 100%;
+    }
+}
+
+
+/* Cloud Services ends */
 
 
 
+/* Design & Development Starts */
+
+#DesignDevelopment{
+    margin-top: 120px;
+}
+
+#DesignDevelopment .image.image-right{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+#DesignDevelopment .text-left{
+    margin-left: 16px;
+}
+
+#DesignDevelopment .text-left p.header{
+    font-weight: 400;
+    font-size: 30px;
+    color: #3B566E;
+}
+
+#DesignDevelopment .text-left p.body{
+    font-weight: 400;
+    font-size: 16px;
+    color: #6F8BA4;
+}
+
+#DesignDevelopment .listSide a.linkList.mainActive::after{
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    background-color: #1A153A;
+    z-index: -1;
+    transform: rotate(55deg) translateY(45px) translateX(-70px);;
+}
+
+#DesignDevelopment .listSide a.linkList.mainActive i{
+    position: relative;
+    margin-left: 25px;
+    margin-right: 37px;
+    z-index: 19;
+    color: white;
+    visibility: visible;
+}
+
+#DesignDevelopment .listSide a.linkList{
+    line-height: 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    height: 2.5rem;
+    width: 15.9375rem;
+    color: #3B566E;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 15;
+    transition: all .3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#DesignDevelopment .listSide a.linkList.active::after{
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    background-color: #1A153A;
+    z-index: -1;
+    transform: rotate(55deg) translateY(45px) translateX(-70px);;
+    transition: all .3s;
+}
+
+#DesignDevelopment .listSide a.linkList::after{
+    content: "";
+    display: block;
+    height: 10rem;
+    width: 10rem;
+    background-color: #eeedf5;
+    z-index: -1;
+    transform: rotate(55deg) translateY(50px) translateX(-65px);;
+    transition: all .3s;
+}
+
+#DesignDevelopment .listSide a.linkList.active i{
+    position: relative;
+    margin-left: 25px;
+    margin-right: 37px;
+    z-index: 19;
+    color: white;
+    visibility: visible;
+    transition: all .3s;
+}
+
+#DesignDevelopment .listSide a.linkList i{
+    position: relative;
+    margin-left: 22px;
+    margin-right: 32px;
+    z-index: 19;
+    color: #1A153A;
+    visibility: visible;
+    transition: all .3s;
+}
+
+/* Design & Development Ends */
+
+
+/* OurTeam starts */
+
+#OurTeam{
+    margin-top: 100px;
+}
+
+#OurTeam .mainText{
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#OurTeam .mainText .headerText{
+    font-weight: 400;
+    font-size: 28px;
+    color: #3B566E;
+    margin-bottom: 20px;
+}
+
+#OurTeam .mainText .bodyText{
+    font-weight: 400;
+    font-size: 1rem;
+    color: #6F8BA4;
+    width: 540px;
+}
+
+#OurTeam .card{
+    border: none;
+}
+
+#OurTeam .card .cardBody{
+    
+}
+
+#OurTeam .card .cardBody .headerText{
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+}
+
+#OurTeam .card .cardBody .headerText .title{
+    font-size: 12px;
+}
+
+
+/* OurTeam ends */
 
 
 
+/* Latest Blogpost Starts */
 
 #LatestBlogPosts {
     padding-bottom: 5rem;
@@ -322,6 +892,12 @@ header .navbar ul li {
     font-size: 0.875rem;
 }
 
+/* @media only screen and (max-width: 767) {
+    #LatestBlogPosts .card {
+        padding-top: 2rem;
+    }
+} */
+
 @media only screen and (max-width: 991px) {
     #LatestBlogPosts .justifyMedia {
         justify-content: center;
@@ -338,11 +914,15 @@ header .navbar ul li {
     }
 }
 
+/* Latest Blogpost Ends */
 
 
 
 
 
+
+
+/* Footer Starts */
 
 
 
@@ -433,3 +1013,5 @@ header .navbar ul li {
         justify-content: center;
     }
 }
+
+/* Footer Ends */
