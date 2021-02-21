@@ -2363,13 +2363,107 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     position: relative;
 }
 
-#MapPart .contactInfo{
-    
+#MapPart .mapDivSizing .borderRadius #gmap_canvas{
+    border-radius: 5px;
 }
 
-#MapPart .contactInfo .item{
+#MapPart .contactInfo .bottomCard{
+    background: linear-gradient(135deg, #1A153A 0%, #565178 100%);
+    color: white;
+    border-radius: 5px;
+    padding: 40px 10px 0px 10px;
+    transform: translateY(-80px);
+}
+
+#MapPart .contactInfo .bottomCard .item{
     display: flex;
     justify-content: center;
+}
+
+#MapPart .contactInfo .bottomCard .item .text i{
+    margin-right: 20px;
+}
+
+#MapPart .contactInfo .bottomCard .item .text span.spaceTag{
+    margin-left: 40px;
+}
+
+#MapPart .contactInfo .icons ul{
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#MapPart .contactInfo .icons ul li{
+    list-style-type: none;
+    margin: 25px 12px;
+}
+
+#MapPart .contactInfo .icons ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+#MapPart .contactInfo .contactBottom p.display-4{
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.88px;
+    line-height: 28px;
+    color: #6F8BA4;
+}
+
+#MapPart .contactInfo .contactBottom p.mainText{
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.88px;
+    line-height: 28px;
+    color: #6F8BA4;
+}
+
+#MapPart .contactInfo .contactBottom form input{
+    height: 50px;
+    padding-left: 20px;
+    transition: all .4s;
+}
+
+#MapPart .contactInfo .contactBottom form input:focus{
+    padding-left: 30px;
+    box-shadow: none;
+    border: 1px solid #1A153A;
+}
+
+#MapPart .contactInfo .contactBottom form textarea{
+    padding-left: 20px;
+    transition: all .4s;
+    margin-top: 40px;
+}
+
+#MapPart .contactInfo .contactBottom form textarea:focus{
+    padding-left: 30px;
+    box-shadow: none;
+    border: 1px solid #1A153A;
+}
+
+#MapPart .contactInfo .contactBottom form button{
+    padding: 10px 10px;
+    width: 160px;
+    display: inline-block;
+    height: 44px;
+    line-height: 25px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #1A153A;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.75px;
+    transition: all 0.3s ease 0s;
+    outline: none !important;
+    cursor: pointer;
+==
 }
 
 
