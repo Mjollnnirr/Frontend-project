@@ -139,5 +139,30 @@ $(function () {
         })
     }
     //CounterIUpEnds
+
+    //Accordion Starts
+
+    if($("#Questions .faqTextRight .accordionHeader").length !== 0){
+        $(document).on("click", "#Questions .faqTextRight .accordionHeader", function(){
+            if($(this).next().length !== 0){
+                let thisButton = $(this)
+                $("#Questions .faqTextRight .accordionBody").hide("fast", function(){
+                    console.log(thisButton.next().show("medium"));
+                });
+                // $(this).next().slideToggle("medium");
+
+                // $("#Questions .faqTextRight .accordionBody").slideUp("fast");
+                // $("#Questions .faqTextRight .accordionBody.active").removeClass("active");
+                // if($(this).next().css("display")==="none"){
+                //     $(this).next().slideDown("medium");
+                // }
+                // else{
+                //     $(this).next().slideUp("fast");
+                // }
+            }
+        })
+    }
+
+    //Accordion ends
 })
 
