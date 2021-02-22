@@ -172,6 +172,11 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     box-shadow: none;
 }
 
+#Entry .grid-container {
+    max-width: 100% !important;
+    widows: 300px;
+}
+
 #Entry .grid-container .first .image {
     overflow: hidden;
     width: 264px;
@@ -1406,6 +1411,7 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 
 #Footer .widthUnset{
     width: unset;
+    margin-left: 10px
 }
 
 #Footer .image img {
