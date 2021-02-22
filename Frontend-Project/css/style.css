@@ -1744,7 +1744,6 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 
 @media only screen and (max-width: 991px) {
     #OurVision .mainContent .textLeft {
-        margin-top: 40px;
         position: unset;
         width: 100%;
     }
@@ -1841,6 +1840,12 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     color: #6F8BA4;
     line-height: 26px !important;
     letter-spacing: .88px !important
+}
+
+@media only screen and (max-width: 375px){
+    #FeaturesEntry .service .iconLeft {
+        height: 134px;
+    }
 }
 
 /* FeaturesEntry Starts */
@@ -2493,7 +2498,6 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     transition: all 0.3s ease 0s;
     outline: none !important;
     cursor: pointer;
-==
 }
 
 
