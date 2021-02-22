@@ -2,7 +2,11 @@ $(function () {
 
     //Navbar Dropdown starts
     $(document).on("mouseenter", "header .navbar ul li.nav-item.dropdown", function(){
-        $(this).find(".dropdown-menu").slideDown("fast")
+        // $(this).click();
+        
+        $(this).find(".dropdown-menu").slideDown("fast");
+        // console.log( $(this).find(".dropdown-menu"));
+        
     })
 
     $(document).on("mouseleave", "header .navbar ul li.nav-item.dropdown", function(){
@@ -13,7 +17,7 @@ $(function () {
 
     // Navbar Scroll start
     $(document).on("scroll", window, function () {
-        if ($(window).scrollTop() > 80) {
+        if ($(window).scrollTop() > 150) {
             $("header .navbar").css({
                 "position": "fixed",
                 "background-color": "white",
@@ -132,12 +136,19 @@ $(function () {
     //Our Team ends
 
     //CounterUp Starts
+
+    $('.timer').countTo();
+
+
     if($("#ParallaxCounter .parallaxContent .text p.number.num").length !== 0){
-        $(".num").counterUp({
-            delay: 10,
-            time: 1000,
+        $(document).on("scroll", window, function(){
+            if($(window).scrollTop() > $("#ParallaxCounter").offset().top && $("#ParallaxCounter").hasClass("start")){
+                $('.timer').countTo();
+                $("#ParallaxCounter").removeClass("start");
+            }
         })
     }
+
     //CounterIUpEnds
 
     //Accordion Starts

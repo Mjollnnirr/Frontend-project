@@ -1212,6 +1212,12 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     box-shadow: none;
 }
 
+@media only screen and (max-width: 1199px) {
+    #PricingPlans .card span.number {
+        left: 122px;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     #PricingPlans .container .row {
         justify-content: center;
@@ -1220,11 +1226,27 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     #PricingPlans .container .row .card {
         margin-top: 30px;
     }
+
+    #PricingPlans .card span.number {
+        left: 142px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     #PricingPlans .card span.number {
         left: 232px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #PricingPlans .card span.number {
+        left: 250px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    #PricingPlans .card span.number {
+        left: 150px;
     }
 }
 
@@ -1380,6 +1402,10 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 
 #Footer .row {
     padding-top: 4.375rem;
+}
+
+#Footer .widthUnset{
+    width: unset;
 }
 
 #Footer .image img {
@@ -1547,8 +1573,6 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     letter-spacing: 1px;
     margin-bottom: 50px;
 }
-
-#AboutUsEntry .mainText {}
 
 #AboutUsEntry .mainText p.display-4 {
     font-weight: 400;
