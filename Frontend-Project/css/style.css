@@ -12,6 +12,24 @@ body {
 header nav {
     background-color: #120e2700;
 }
+/* remember */
+header nav ul.navbar-nav li.dropdown .dropdown-menu.navbarHoverBlock{
+    z-index: -1;
+    display: block;
+    transform: translateY(-30px);
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+}
+
+/* important */
+
+header nav ul.navbar-nav li.dropdown:hover .dropdown-menu.navbarHoverBlock{
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
 
 header .navbar {
     height: 80px;
@@ -26,10 +44,10 @@ header .navbar {
 header .navbar a.hamburger{
     height: 30px;
     width: 30px;
-    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    display: none;
 }
 
 header .navbar .hamburgerIcon span.regular{
@@ -40,11 +58,6 @@ header .navbar .hamburgerIcon span.regular{
     width: 30px;
     height: 2px;
     transition: background-color .3s;
-
-
-
-
-    /* background-color: white; */
 }
 
 
@@ -59,10 +72,6 @@ header .navbar .hamburgerIcon span.before{
     position: absolute;
     bottom: 3px;
     transition: all.3s;
-
-
-    /* transform: rotate(45deg);
-    bottom: 0; */
 }
 
 header .navbar .hamburgerIcon span.after{
@@ -108,6 +117,10 @@ header .navbar ul li {
 header .navbar ul li a {
     text-decoration: none;
     color: #6F8BA4;
+}
+
+header .navbar .buttons {
+    display: block;
 }
 
 header .navbar .buttons .singIn {
@@ -197,17 +210,67 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 1024px){
+    header .navbar .buttons{
+        display: flex;
+    }
+
+    header .navbar .buttons .singIn {
+        padding: 6px 25px;
+        border: 1px solid #1A153A;
+        color: #1A153A;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    header .navbar .buttons .singUp {
+        padding: 6px 25px;
+        border: 1px solid #1A153A;
+        background: linear-gradient(135deg, #1A153A 0%, #565178 100%);
+        color: white;
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+}
+
+@media only screen and (max-width: 812px){
+    header .navbar .buttons{
+        display: none;
+    }
+
+    header .navbar a.hamburger{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    header .navbar .buttons{
+        display: none;
+    }
+
+    header .navbar a.hamburger{
+        display: flex;
+    }
+}
+
 @media only screen and (max-width: 375px){
     header .navbar .buttons{
         display: none;
     }
 }
 
-/* @media only screen and (max-width: 375px){
+@media only screen and (max-width: 375px){
     header .navbar .buttons{
         display: none;
     }
-} */
+
+    header .navbar a.hamburger{
+        display: flex;
+    }
+}
 
 /* navbar end */
 
@@ -1893,7 +1956,7 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     transition: transform .3s;
 }
 
-#FeaturesEntry .service .iconLeft .image:hover::after {
+#FeaturesEntry .service:hover .iconLeft .image::after {
     transform: rotate(45deg);
 }
 
@@ -1925,9 +1988,62 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     letter-spacing: .88px !important
 }
 
+@media only screen and (max-width: 1024px){
+    #FeaturesEntry .service .iconLeft {
+        height: 134px;
+        margin-top: 20px;
+    }
+
+    #FeaturesEntry .service {
+        padding: 40px 15px;
+    }
+
+    #FeaturesEntry .service .iconLeft .image{
+        margin-right: 30;
+    }
+}
+
+@media only screen and (max-width: 812px){
+    #FeaturesEntry .service .iconLeft {
+        height: 134px;
+    }
+
+    #FeaturesEntry .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 30px;
+        text-align: center;
+    }
+
+    #FeaturesEntry .service .iconLeft .image{
+        margin-right: 0;
+    }
+
+    #FeaturesEntry .service .textRight p.display-4 {
+        margin-top: 45px;
+    }
+}
+
 @media only screen and (max-width: 375px){
     #FeaturesEntry .service .iconLeft {
         height: 134px;
+    }
+
+    #FeaturesEntry .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 30px;
+        text-align: center;
+    }
+
+    #FeaturesEntry .service .iconLeft .image{
+        margin-right: 0;
+    }
+
+    #FeaturesEntry .service .textRight p.display-4 {
+        margin-top: 45px;
     }
 }
 
@@ -2674,6 +2790,17 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 
     #MapPart .contactInfo .bottomCard .item.little-left .text p i{
         margin-right: 20px;
+    }
+}
+
+
+@media screen and (max-width: 380px){
+    .navbarHoverBlock{
+        display: block !important;
+    }
+
+    .tttt{
+        display: block !important;
     }
 }
 

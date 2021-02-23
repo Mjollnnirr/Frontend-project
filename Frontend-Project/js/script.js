@@ -1,17 +1,10 @@
 $(function () {
 
     //Navbar Dropdown starts
-    $(document).on("mouseenter", "header .navbar ul li.nav-item.dropdown", function(){
-        // $(this).click();
-        
-        $(this).find(".dropdown-menu").slideDown("fast");
-        // console.log( $(this).find(".dropdown-menu"));
-        
-    })
 
-    $(document).on("mouseleave", "header .navbar ul li.nav-item.dropdown", function(){
-        $(this).find(".dropdown-menu").slideUp("medium")
-    })
+    
+
+
     //Navbar Dropdown ends
 
 
@@ -22,20 +15,20 @@ $(function () {
     // console.log($("header .navbar .hamburgerIcon span.after"));
     // console.log($("header .navbar .hamburgerIcon span.regular"));
 
-    $(document).on("click", "header .navbar a.hamburger", function(){
-        if($(this).find("span.regular").hasClass("active")){
-            $("header .navbar .hamburgerIcon span.regular").removeClass("active");
-            $("header .navbar .hamburgerIcon span.after").removeClass("active");
-            $("header .navbar .hamburgerIcon span.before").removeClass("active");
-        }
-        else{
-            $("header .navbar .hamburgerIcon span.regular").addClass("active");
-            $("header .navbar .hamburgerIcon span.after").addClass("active");
-            $("header .navbar .hamburgerIcon span.before").addClass("active");
-        }
-
-        
-    })
+    if($("header .navbar a.hamburger").length !== 0){
+        $(document).on("click", "header .navbar a.hamburger", function(){
+            if($(this).find("span.regular").hasClass("active")){
+                $("header .navbar .hamburgerIcon span.regular").removeClass("active");
+                $("header .navbar .hamburgerIcon span.after").removeClass("active");
+                $("header .navbar .hamburgerIcon span.before").removeClass("active");
+            }
+            else{
+                $("header .navbar .hamburgerIcon span.regular").addClass("active");
+                $("header .navbar .hamburgerIcon span.after").addClass("active");
+                $("header .navbar .hamburgerIcon span.before").addClass("active");
+            }
+        })
+    }
 
 
 
@@ -59,16 +52,6 @@ $(function () {
                 "height": "100px",
                 "background-color": "transparent",
             })
-            // $("nav .buttons a").first().css({
-            //     "border": "1px solid #1A153A",
-            //     "color": "#1A153A",
-            // });
-
-            // $("nav .buttons a").last().css({
-            //     "border": "1px solid #1A153A",
-            //     "background-color": "#1A153A",
-            //     "color": "white",
-            // });
         }
     })
     // Navbar Scroll end
@@ -116,7 +99,6 @@ $(function () {
         $(document).on("mouseenter", "#CloudServices .listSide a.linkList", function () {
             $(this).addClass("active");
         })
-
         $(document).on("mouseleave", "#CloudServices .listSide a.linkList", function () {
             $(this).removeClass("active");
         })
@@ -129,7 +111,6 @@ $(function () {
         $(document).on("mouseenter", "#DesignDevelopment .listSide a.linkList", function () {
             $(this).addClass("active");
         })
-
         $(document).on("mouseleave", "#DesignDevelopment .listSide a.linkList", function () {
             $(this).removeClass("active");
         })
@@ -165,7 +146,7 @@ $(function () {
 
     //CounterUp Starts
 
-    $('.timer').countTo();
+    //Counter                     // $('.timer').countTo();
 
 
     if($("#ParallaxCounter .parallaxContent .text p.number.num").length !== 0){
@@ -188,20 +169,9 @@ $(function () {
                 $("#Questions .faqTextRight .accordionBody").hide("fast", function(){
                     console.log(thisButton.next().show("medium"));
                 });
-                // $(this).next().slideToggle("medium");
-
-                // $("#Questions .faqTextRight .accordionBody").slideUp("fast");
-                // $("#Questions .faqTextRight .accordionBody.active").removeClass("active");
-                // if($(this).next().css("display")==="none"){
-                //     $(this).next().slideDown("medium");
-                // }
-                // else{
-                //     $(this).next().slideUp("fast");
-                // }
             }
         })
     }
-
     //Accordion ends
 })
 
