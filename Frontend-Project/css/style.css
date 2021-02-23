@@ -23,6 +23,77 @@ header .navbar {
     top: 0;
 }
 
+header .navbar a.hamburger{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header .navbar .hamburgerIcon span.regular{
+    display: block;
+    color: #3B566E;
+    background-color: #3B566E;
+    font-size: 1px;
+    width: 30px;
+    height: 2px;
+    transition: background-color .3s;
+
+
+
+
+    /* background-color: white; */
+}
+
+
+
+header .navbar .hamburgerIcon span.before{
+    display: block;
+    color: #3B566E;
+    background-color: #3B566E;
+    font-size: 1px;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    bottom: 3px;
+    transition: all.3s;
+
+
+    /* transform: rotate(45deg);
+    bottom: 0; */
+}
+
+header .navbar .hamburgerIcon span.after{
+    display: block;
+    color: #3B566E;
+    background-color: #3B566E;
+    font-size: 1px;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    top: 3px;
+    transition: all .3s;
+}
+
+header .navbar .hamburgerIcon span.regular.active{
+    background-color: white;
+    transition: all .3s;
+}
+
+header .navbar .hamburgerIcon span.after.active{
+    transform: rotate(-45deg);
+    top: 13px;
+    transition: all .3s;
+}
+
+header .navbar .hamburgerIcon span.before.active{
+    transform: rotate(45deg);
+    bottom: 15px;
+    transition: all .3s;
+}
+
 header .navbar ul {
     margin-left: 80px;
     color: gray;
@@ -64,7 +135,6 @@ header .navbar .buttons .singUp {
     padding: 6px 30px;
     border: 1px solid #1A153A;
     background: linear-gradient(135deg, #1A153A 0%, #565178 100%);
-    ;
     color: white;
     margin-left: 5px;
     font-size: 12px;
@@ -127,6 +197,17 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     border-radius: 10px;
 }
 
+@media only screen and (max-width: 375px){
+    header .navbar .buttons{
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width: 375px){
+    header .navbar .buttons{
+        display: none;
+    }
+} */
 
 /* navbar end */
 
@@ -963,7 +1044,7 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     font-weight: 400;
     font-size: 1rem;
     color: #6F8BA4;
-    width: 540px;
+    /* width: 540px; */
 }
 
 #OurTeam .card {

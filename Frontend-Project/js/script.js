@@ -15,6 +15,34 @@ $(function () {
     //Navbar Dropdown ends
 
 
+
+    //navbar
+
+    // console.log($("header .navbar .hamburgerIcon span.before"));
+    // console.log($("header .navbar .hamburgerIcon span.after"));
+    // console.log($("header .navbar .hamburgerIcon span.regular"));
+
+    $(document).on("click", "header .navbar a.hamburger", function(){
+        if($(this).find("span.regular").hasClass("active")){
+            $("header .navbar .hamburgerIcon span.regular").removeClass("active");
+            $("header .navbar .hamburgerIcon span.after").removeClass("active");
+            $("header .navbar .hamburgerIcon span.before").removeClass("active");
+        }
+        else{
+            $("header .navbar .hamburgerIcon span.regular").addClass("active");
+            $("header .navbar .hamburgerIcon span.after").addClass("active");
+            $("header .navbar .hamburgerIcon span.before").addClass("active");
+        }
+
+        
+    })
+
+
+
+
+
+
+
     // Navbar Scroll start
     $(document).on("scroll", window, function () {
         if ($(window).scrollTop() > 150) {
