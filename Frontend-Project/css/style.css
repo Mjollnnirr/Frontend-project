@@ -2480,12 +2480,29 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     justify-content: center;
 }
 
-#MapPart .contactInfo .bottomCard .item .text i{
-    margin-right: 20px;
+#MapPart .contactInfo .bottomCard .item .text{
+    display: flex;
+    justify-content: center;
 }
 
-#MapPart .contactInfo .bottomCard .item .text span.spaceTag{
-    margin-left: 40px;
+#MapPart .contactInfo .bottomCard .item .text.columnDiv{
+    flex-direction: column
+}
+
+#MapPart .contactInfo .bottomCard .item .text i{
+    margin-right: 20px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#MapPart .contactInfo .bottomCard .item .text p.mailing{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: left;
+}
+
+#MapPart .contactInfo .bottomCard .item .text p.mailing i{
+    margin-right: 10px;
 }
 
 #MapPart .contactInfo .icons ul{
@@ -2563,6 +2580,20 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     transition: all 0.3s ease 0s;
     outline: none !important;
     cursor: pointer;
+}
+
+@media only screen and (max-width:375px){
+    #MapPart .contactInfo .bottomCard .item.shouldLeft{
+        margin-left: -137px;
+    }
+
+    #MapPart .contactInfo .bottomCard .item.little-left{
+        margin-left: -76px;
+    }
+
+    #MapPart .contactInfo .bottomCard .item.little-left .text p i{
+        margin-right: 20px;
+    }
 }
 
 
