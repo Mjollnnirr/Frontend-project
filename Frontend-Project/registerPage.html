@@ -81,8 +81,8 @@
                     </ul>
                 </div>
                 <div class="buttons">
-                    <a href="#" class="btn singIn d-none">SIGN IN</a>
-                    <a href="registerPage.html" class="btn singUp">SIGN UP</a>
+                    <a href="logPage.html" class="btn singIn">SIGN IN</a>
+                    <a href="#" class="btn singUp d-none">SIGN UP</a>
                 </div>
 
             </div>
@@ -91,49 +91,46 @@
     </header>
     <main>
 
-        <section id="LogIn">
+        <section id="Register">
             <div class="container-fluid p-0">
                 <div class="d-lg-flex half">
-                    <div class="col-lg-6 order-lg-2 p-0">
+                    <div class="col-lg-6 order-lg-1 p-0">
                         <div class="rightSide bg order-1 order-md-2">
-                            <img src="images/main1.jpg" class="img-fluid" alt="">
+                            <img src="images/BlogMain1.jpg" class="img-fluid" alt="">
                             <!-- <a href="#" class="display-4 mainDisplay">Register</a> -->
                         </div>
                     </div>
-                    <div class="col-lg-6 order-lg-1">
+                    <div class="col-lg-6 order-lg-2">
                         <div class="leftSide order-2 order-md-1">
                             <div class="container">
                                 <div class="row justify-content-center align-items-center">
                                     <div class="col-lg-8">
                                         <div class="displayingSometings">
-                                            <p class="display-4">Log-in</p>
+                                            <p class="display-4 mt-5 mt-lg-0">Register</p>
                                             <div class="formSide">
                                                 <form action="#" method="post">
                                                     <div class="form-group first mb-4">
-                                                        <label  for="username">Username</label>
-                                                        <input type="email" class="form-control" autocomplete="off"
+                                                        <label for="firstName">First Name</label>
+                                                        <input type="text" class="form-control" autocomplete="off" 
+                                                            placeholder="Farid" id="firstName">
+                                                    </div>
+                                                    <div class="form-group first mb-4">
+                                                        <label for="lastName">Last Name</label>
+                                                        <input type="text" class="form-control" autocomplete="off" 
+                                                            placeholder="Mjollnnirr" id="lastName">
+                                                    </div>
+                                                    <div class="form-group first mb-4">
+                                                        <label for="username">Username</label>
+                                                        <input type="email" class="form-control" autocomplete="off" 
                                                             placeholder="your-email@mjollnnirr.com" id="username">
                                                     </div>
                                                     <div class="form-group last mb-3">
                                                         <label for="password">Password</label>
-                                                        <input type="password" class="form-control"
+                                                        <input type="password" class="form-control" autocomplete="off" 
                                                             placeholder="Your Password" id="password">
                                                     </div>
-                                                    <div class="d-flex mb-5 align-items-center">
-                                                        <label class="control control--checkbox mb-0"><span
-                                                                class="caption">Remember me</span>
-                                                            <input type="checkbox" class="checkBox heighting"
-                                                                checked="checked" autocomplete="off">
-                                                            <div class="control__indicator"></div>
-                                                        </label>
-                                                        <span class="ml-auto forgotPass"><a href="#"
-                                                                class="forgot-pass">Forgot Password</a></span>
-                                                    </div>
-                                                    <input type="submit" value="Log In" autocomplete="off" class="btn btn-block">
+                                                    <input type="submit" value="Register" class="btn btn-block mt-3" autocomplete="off">
                                                 </form>
-                                            </div>
-                                            <div class="registerSide text-center">
-                                                <a href="#">or Register here</a>
                                             </div>
                                         </div>
                                     </div>

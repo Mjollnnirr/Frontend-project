@@ -210,6 +210,7 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     header .navbar ul{
         margin-left: 0;
         background-color: white;
+        border-radius: 5px;
     }
 }
 
@@ -236,6 +237,11 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
         font-size: 12px;
         font-weight: 600;
     }
+
+    header .navbar ul{
+        background-color: white;
+        border-radius: 5px;
+    }
     
 }
 
@@ -247,6 +253,11 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     header .navbar a.hamburger{
         display: flex;
     }
+
+    header .navbar ul{
+        background-color: white;
+        border-radius: 5px;
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -257,11 +268,21 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     header .navbar a.hamburger{
         display: flex;
     }
+
+    header .navbar ul{
+        background-color: white;
+        border-radius: 5px;
+    }
 }
 
 @media only screen and (max-width: 375px){
     header .navbar .buttons{
         display: none;
+    }
+
+    header .navbar ul{
+        background-color: white;
+        border-radius: 5px;
     }
 }
 
@@ -272,6 +293,11 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 
     header .navbar a.hamburger{
         display: flex;
+    }
+
+    header .navbar ul{
+        background-color: white;
+        border-radius: 5px;
     }
 }
 
@@ -324,40 +350,18 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     widows: 300px;
 }
 
-#Entry .grid-container .first .image {
-    overflow: hidden;
-    width: 264px;
-    height: 337px;
-    border-radius: 5px;
-}
-
-#Entry .grid-container .second .image {
-    overflow: hidden;
-    width: 264px;
-    height: 251px;
-    border-radius: 5px;
-}
-
-#Entry .grid-container .third .image {
-    overflow: hidden;
-    width: 264px;
-    height: 200px;
-    border-radius: 5px;
-}
-
-#Entry .grid-container .fourth .image {
-    overflow: hidden;
-    width: 264px;
-    height: 372px;
-    border-radius: 5px;
-}
-
-
 #Entry .grid-container .first {
     /* grid-area: first; */
     overflow: hidden;
     border-radius: 5px;
     height: 337px;
+}
+
+#Entry .grid-container .first .image {
+    overflow: hidden;
+    width: 264px;
+    height: 337px;
+    border-radius: 5px;
 }
 
 #Entry .grid-container .first img {
@@ -373,6 +377,13 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     border-radius: 5px;
 }
 
+#Entry .grid-container .second .image {
+    overflow: hidden;
+    width: 264px;
+    height: 251px;
+    border-radius: 5px;
+}
+
 #Entry .grid-container .second img {
     width: 264px;
     height: 251px;
@@ -383,6 +394,40 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     /* grid-area: third; */
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .third .image {
+    overflow: hidden;
+    width: 264px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .third img {
+    width: 264px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .fourth {
+    max-height: 286px;
+    /* grid-area: fourth; */
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+#Entry .grid-container .fourth .image {
+    overflow: hidden;
+    width: 264px;
+    height: 372px;
+    border-radius: 5px;
+}
+
+#Entry .grid-container .fourth img {
+    width: 264px;
+    height: 286px;
     border-radius: 5px;
 }
 
@@ -405,27 +450,6 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     color: white;
     padding-left: 5px;
 }
-
-#Entry .grid-container .third img {
-    width: 264px;
-    height: 200px;
-    border-radius: 5px;
-}
-
-#Entry .grid-container .fourth {
-    max-height: 286px;
-    /* grid-area: fourth; */
-    overflow: hidden;
-    border-radius: 5px;
-    position: relative;
-}
-
-#Entry .grid-container .fourth img {
-    width: 264px;
-    height: 286px;
-    border-radius: 5px;
-}
-
 
 #Entry .grid-container {
     display: grid;
@@ -2801,10 +2825,6 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     .navbarHoverBlock{
         display: block !important;
     }
-
-    .tttt{
-        display: block !important;
-    }
 }
     /* Map Ends */
 
@@ -2818,14 +2838,181 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 }
 
 #LogIn .rightSide{
-    /* background-image: url('../images/main1.jpg'); */
-    /* max-width: 100%; */
+    position: relative;
 }
 
+#LogIn .registerSide a{
+    text-decoration: none;
+    color: #120e27;
+}
+
+#LogIn .rightSide::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1a153a75;
+}
+
+#LogIn .leftSide .displayingSometings{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 70px;
+}
 
 #LogIn .leftSide .formSide{
-    margin-top: 130px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+#LogIn .leftSide .formSide input:focus{
+    box-shadow: none;
+}
+
+#LogIn .leftSide .formSide span.forgotPass a{
+    text-decoration: none;
+    color: #120e27;
+}
+
+#LogIn .leftSide .formSide input.btn{
+    padding: 10px 10px;
+    display: inline-block;
+    height: 44px;
+    line-height: 25px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #1A153A;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.75px;
+    transition: all 0.3s ease 0s;
+    outline: none !important;
+    cursor: pointer;
+}
+
+#LogIn .leftSide .formSide input.btn:hover{
+    background: #120e27;
+    transition: all .3s;
+}
+
+#LogIn .leftSide .formSide form input{
+    padding-left: 20px;
+    transition: all .4s;
+    height: 44px;
+}
+
+#LogIn .leftSide .formSide form input.heighting{
+    height: unset;
+}
+
+#LogIn .leftSide .formSide form input:focus{
+    padding-left: 30px;
+    box-shadow: none;
+    border: 1px solid #1A153A;
+}
+
+/* Log Page ends */
+
+
+/* Register Page Starts */
+
+#Register{
+    padding-top: 100px;
+}
+
+#Register .rightSide{
+    position: relative;
+}
+
+@media only screen and (max-width: 1024px){
+    #Register .rightSide{
+        margin-top: 40px;
+    }
+}
+
+#Register .registerSide a{
+    text-decoration: none;
+    color: #120e27;
+}
+
+#Register .rightSide::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #1a153a75;
+}
+
+#Register .leftSide .displayingSometings{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Register .leftSide .formSide{
+    margin-top: 40px;
+    width: 100%;
+}
+
+#Register .leftSide .formSide input:focus{
+    box-shadow: none;
+}
+
+#Register .leftSide .formSide span.forgotPass a{
+    text-decoration: none;
+    color: #120e27;
+}
+
+#Register .leftSide .formSide input.btn{
+    padding: 10px 10px;
+    display: inline-block;
+    height: 44px;
+    line-height: 25px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: #1A153A;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 0.75px;
+    transition: all 0.3s ease 0s;
+    outline: none !important;
+    cursor: pointer;
+}
+
+#Register .leftSide .formSide input.btn:hover{
+    background: #120e27;
+    transition: all .3s;
+}
+
+#Register .leftSide .formSide form input{
+    padding-left: 20px;
+    transition: all .4s;
+    height: 44px;
+}
+
+#Register .leftSide .formSide form input.heighting{
+    height: unset;
+}
+
+#Register .leftSide .formSide form input:focus{
+    padding-left: 30px;
+    box-shadow: none;
+    border: 1px solid #1A153A;
 }
 
 
-/* Log Page ends */
+
+/* Register Page Ends */
