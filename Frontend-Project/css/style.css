@@ -12,17 +12,15 @@ body {
 header nav {
     background-color: #120e2700;
 }
-/* remember */
+
 header nav ul.navbar-nav li.dropdown .dropdown-menu.navbarHoverBlock{
     z-index: -1;
     display: block;
     transform: translateY(-30px);
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transition: all .5s;
 }
-
-/* important */
 
 header nav ul.navbar-nav li.dropdown:hover .dropdown-menu.navbarHoverBlock{
     transform: translateY(0px);
@@ -59,8 +57,6 @@ header .navbar .hamburgerIcon span.regular{
     height: 2px;
     transition: background-color .3s;
 }
-
-
 
 header .navbar .hamburgerIcon span.before{
     display: block;
@@ -208,6 +204,13 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     left: 0;
     bottom: 0;
     border-radius: 10px;
+}
+
+@media only screen and (max-width: 375px){
+    header .navbar ul{
+        margin-left: 0;
+        background-color: white;
+    }
 }
 
 @media only screen and (max-width: 1024px){
@@ -2803,10 +2806,26 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
         display: block !important;
     }
 }
-
-
-
     /* Map Ends */
 
     /* Parallaw ends */
 /* Contact Ends */
+
+/* Log Page starts */
+
+#LogIn{
+    padding-top: 80px;
+}
+
+#LogIn .rightSide{
+    /* background-image: url('../images/main1.jpg'); */
+    /* max-width: 100%; */
+}
+
+
+#LogIn .leftSide .formSide{
+    margin-top: 130px;
+}
+
+
+/* Log Page ends */

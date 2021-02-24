@@ -1,40 +1,41 @@
 $(function () {
-
     //Navbar Dropdown starts
-
-    
-
-
-    //Navbar Dropdown ends
-
-
-
-    //navbar
-
-    // console.log($("header .navbar .hamburgerIcon span.before"));
-    // console.log($("header .navbar .hamburgerIcon span.after"));
-    // console.log($("header .navbar .hamburgerIcon span.regular"));
-
-    if($("header .navbar a.hamburger").length !== 0){
-        $(document).on("click", "header .navbar a.hamburger", function(){
-            if($(this).find("span.regular").hasClass("active")){
-                $("header .navbar .hamburgerIcon span.regular").removeClass("active");
-                $("header .navbar .hamburgerIcon span.after").removeClass("active");
-                $("header .navbar .hamburgerIcon span.before").removeClass("active");
+    if ($(".nav-item.dropdown").length !== 0) {
+        $(document).on("click", "header .navbar button.navbar-toggler", function () {
+            $("header nav ul.navbar-nav li.dropdown .dropdown-menu.breakPoint").removeClass("navbarHoverBlock");
+            if (window.matchMedia('(max-width: 375px)').matches) {
+                $("header nav ul.navbar-nav li.dropdown .dropdown-menu.breakPoint").removeClass("navbarHoverBlock");
             }
-            else{
-                $("header .navbar .hamburgerIcon span.regular").addClass("active");
-                $("header .navbar .hamburgerIcon span.after").addClass("active");
-                $("header .navbar .hamburgerIcon span.before").addClass("active");
+            else if (window.matchMedia('(max-width: 768px)').matches) {
+                $("header nav ul.navbar-nav li.dropdown .dropdown-menu.breakPoint").removeClass("navbarHoverBlock");
+            }
+            else if (window.matchMedia('(max-width: 812px)').matches) {
+                $("header nav ul.navbar-nav li.dropdown .dropdown-menu.breakPoint").removeClass("navbarHoverBlock");
             }
         })
     }
 
 
 
+    //Navbar Dropdown ends
 
 
+    //navbar
 
+    if ($("header .navbar a.hamburger").length !== 0) {
+        $(document).on("click", "header .navbar a.hamburger", function () {
+            if ($(this).find("span.regular").hasClass("active")) {
+                $("header .navbar .hamburgerIcon span.regular").removeClass("active");
+                $("header .navbar .hamburgerIcon span.after").removeClass("active");
+                $("header .navbar .hamburgerIcon span.before").removeClass("active");
+            }
+            else {
+                $("header .navbar .hamburgerIcon span.regular").addClass("active");
+                $("header .navbar .hamburgerIcon span.after").addClass("active");
+                $("header .navbar .hamburgerIcon span.before").addClass("active");
+            }
+        })
+    }
 
     // Navbar Scroll start
     $(document).on("scroll", window, function () {
@@ -58,19 +59,19 @@ $(function () {
 
 
     //Grid Part starts
-    if($("#Entry .third .playIcon").length>0){
-        $(document).on("mouseenter", ("#Entry .third .playIcon"), function(){
+    if ($("#Entry .third .playIcon").length > 0) {
+        $(document).on("mouseenter", ("#Entry .third .playIcon"), function () {
             $("#Entry .third .image img").css({
                 "transform": "scale(1.1)",
             })
         })
-        $(document).on("mouseleave", ("#Entry .third .image img"), function(){
+        $(document).on("mouseleave", ("#Entry .third .image img"), function () {
             $("#Entry .third .image img").css({
                 "transform": "scale(1)",
             })
         })
 
-        $(document).on("mouseenter", ("#Entry .third .image img"), function(){
+        $(document).on("mouseenter", ("#Entry .third .image img"), function () {
             $("#Entry .third .image img").css({
                 "transform": "scale(1.1)",
             })
@@ -88,7 +89,7 @@ $(function () {
             mobile: true,       // default
             live: true,       // default
 
-    })
+        })
     wow.init();
     new WOW().init();
     //UpperServices animation ends
@@ -119,8 +120,8 @@ $(function () {
 
 
     //Our Team starts
-    if($("#OurTeam .card").length!==0){
-        $(document).on("mouseenter", "#OurTeam .card", function(){
+    if ($("#OurTeam .card").length !== 0) {
+        $(document).on("mouseenter", "#OurTeam .card", function () {
             let linkIcons = $(this).find(".cardBody .headerText .icons ul li a");
             let cardHeader = $(this).find(".cardBody .headerText");
             let cardText = $(this).find(".cardBody .headerText .text");
@@ -128,10 +129,10 @@ $(function () {
             cardHeader.addClass("active");
             cardText.addClass("active");
             linkIcons.addClass("active");
-            image.addClass("active");      
+            image.addClass("active");
         })
 
-        $(document).on("mouseleave", "#OurTeam .card", function(){
+        $(document).on("mouseleave", "#OurTeam .card", function () {
             let linkIcons = $(this).find(".cardBody .headerText .icons ul li a");
             let cardHeader = $(this).find(".cardBody .headerText");
             let cardText = $(this).find(".cardBody .headerText .text");
@@ -139,7 +140,7 @@ $(function () {
             cardHeader.removeClass("active");
             cardText.removeClass("active");
             linkIcons.removeClass("active");
-            image.removeClass("active");      
+            image.removeClass("active");
         })
     }
     //Our Team ends
@@ -149,9 +150,9 @@ $(function () {
     //Counter                     // $('.timer').countTo();
 
 
-    if($("#ParallaxCounter .parallaxContent .text p.number.num").length !== 0){
-        $(document).on("scroll", window, function(){
-            if($(window).scrollTop() > $("#ParallaxCounter").offset().top && $("#ParallaxCounter").hasClass("start")){
+    if ($("#ParallaxCounter .parallaxContent .text p.number.num").length !== 0) {
+        $(document).on("scroll", window, function () {
+            if ($(window).scrollTop() > $("#ParallaxCounter").offset().top && $("#ParallaxCounter").hasClass("start")) {
                 $('.timer').countTo();
                 $("#ParallaxCounter").removeClass("start");
             }
@@ -162,11 +163,11 @@ $(function () {
 
     //Accordion Starts
 
-    if($("#Questions .faqTextRight .accordionHeader").length !== 0){
-        $(document).on("click", "#Questions .faqTextRight .accordionHeader", function(){
-            if($(this).next().length !== 0){
+    if ($("#Questions .faqTextRight .accordionHeader").length !== 0) {
+        $(document).on("click", "#Questions .faqTextRight .accordionHeader", function () {
+            if ($(this).next().length !== 0) {
                 let thisButton = $(this)
-                $("#Questions .faqTextRight .accordionBody").hide("fast", function(){
+                $("#Questions .faqTextRight .accordionBody").hide("fast", function () {
                     console.log(thisButton.next().show("medium"));
                 });
             }
