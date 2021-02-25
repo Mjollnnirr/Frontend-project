@@ -174,5 +174,23 @@ $(function () {
         })
     }
     //Accordion ends
+
+
+    // Log Page starts
+
+    localStorage.setItem("userName", "Mjollnnirr");
+    localStorage.setItem("password", "11farid22");
+
+    if($("#LogIn .displayingSometings .formSide form").length !== 0){
+        $(document).on("submit", "#LogIn .displayingSometings .formSide form", function(ev){
+            ev.preventDefault();
+        })
+
+        console.log($("#LogIn .displayingSometings .formSide form"));
+    }
+
+    // Log Page ends
+
+
 })
 

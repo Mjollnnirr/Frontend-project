@@ -2869,6 +2869,15 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     width: 100%;
 }
 
+#LogIn .leftSide .formSide form label.wrongCondition{
+    color: tomato;
+}
+
+#LogIn .leftSide .formSide form input.wrongCondition{
+    color: tomato;
+    border: 1px solid tomato;
+}
+
 #LogIn .leftSide .formSide input:focus{
     box-shadow: none;
 }
@@ -2902,6 +2911,10 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     transition: all .3s;
 }
 
+#LogIn .leftSide .formSide input.btn.focusNone:focus{
+    padding: 0;
+}
+
 #LogIn .leftSide .formSide form input{
     padding-left: 20px;
     transition: all .4s;
@@ -2931,12 +2944,6 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     position: relative;
 }
 
-@media only screen and (max-width: 1024px){
-    #Register .rightSide{
-        margin-top: 40px;
-    }
-}
-
 #Register .registerSide a{
     text-decoration: none;
     color: #120e27;
@@ -2962,6 +2969,15 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
 #Register .leftSide .formSide{
     margin-top: 40px;
     width: 100%;
+}
+
+#Register .leftSide .formSide form label.wrongCondition{
+    color: tomato;
+}
+
+#Register .leftSide .formSide form input.wrongCondition{
+    color: tomato;
+    border: 1px solid tomato;
 }
 
 #Register .leftSide .formSide input:focus{
@@ -3011,6 +3027,12 @@ header .navbar ul li.nav-item.dropdown .dropdown-menu a.dropdown-item:hover::aft
     padding-left: 30px;
     box-shadow: none;
     border: 1px solid #1A153A;
+}
+
+@media only screen and (max-width: 1024px){
+    #Register .rightSide{
+        margin-top: 40px;
+    }
 }
 
 
