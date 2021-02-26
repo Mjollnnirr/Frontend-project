@@ -7,6 +7,10 @@ body {
     /* background-color: #fff; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .loader-image{
     position: fixed;
     left: 0px;

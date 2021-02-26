@@ -158,7 +158,7 @@ $(function () {
 
     if ($("#ParallaxCounter .parallaxContent .text p.number.num").length !== 0) {
         $(document).on("scroll", window, function () {
-            if ($(window).scrollTop() > $("#ParallaxCounter").offset().top && $("#ParallaxCounter").hasClass("start")) {
+            if ($(window).scrollTop() > $("#ParallaxCounter").offset().top -450 && $("#ParallaxCounter").hasClass("start")) {
                 $('.timer').countTo();
                 $("#ParallaxCounter").removeClass("start");
             }
