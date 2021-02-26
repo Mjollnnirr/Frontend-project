@@ -1,4 +1,10 @@
 $(function () {
+
+
+    $(window).on("load", function () {
+        $(".loader-image").fadeOut("hide");
+    });
+
     //Navbar Dropdown starts
     if ($(".nav-item.dropdown").length !== 0) {
         $(document).on("click", "header .navbar button.navbar-toggler", function () {
@@ -181,8 +187,8 @@ $(function () {
     localStorage.setItem("userName", "Mjollnnirr");
     localStorage.setItem("password", "11farid22");
 
-    if($("#LogIn .displayingSometings .formSide form").length !== 0){
-        $(document).on("submit", "#LogIn .displayingSometings .formSide form", function(ev){
+    if ($("#LogIn .displayingSometings .formSide form").length !== 0) {
+        $(document).on("submit", "#LogIn .displayingSometings .formSide form", function (ev) {
             ev.preventDefault();
         })
 
@@ -192,5 +198,9 @@ $(function () {
     // Log Page ends
 
 
+
 })
+$(window).on("load", function () {
+    $(".loader-image").fadeOut("slow");
+});
 
